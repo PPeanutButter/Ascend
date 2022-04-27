@@ -10,3 +10,4 @@
 4. 项目中有任何大型静态文件的，将文件各上传至`dataset_unzip`、`dataset_unzip_mini`, 如上图。
 
 ## 使用pycharm创建modelarts训练任务
+
