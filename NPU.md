@@ -186,5 +186,8 @@ config.trainset_root = args.data_url + config.trainset_root
 config.validationset_root = args.data_url + config.validationset_root
 ```
 
+## 通过Pycharm提交NPU训练Job
+> 见群中聊天记录，设置几个值，不想写了，你想写可以提交PR。
+
 ## 完成
 > 开始你的踩坑之旅~
