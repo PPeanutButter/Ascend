@@ -107,8 +107,8 @@ import sys
 
 # 解析输入参数data_url
 parser = argparse.ArgumentParser()
-parser.add_argument("--data_url", type=str, default="/home/ma-user/modelarts/inputs/data_url_0")
-parser.add_argument("--train_url", type=str, default="/home/ma-user/modelarts/outputs/train_url_0/")
+parser.add_argument("--data_url", type=str, default="")
+parser.add_argument("--train_url", type=str, default="")
 config = parser.parse_args()
 
 
@@ -141,7 +141,7 @@ if __name__ == '__main__':
 
     # 加入、添加下面代码到你的脚本(xx.py)中以支持传参(必须修改) 开始
     # parser = argparse.ArgumentParser()
-    # parser.add_argument("--data_url", type=str, default="/home/ma-user/modelarts/inputs/data_url_0")
+    # parser.add_argument("--data_url", type=str, default="")
     # config = parser.parse_args()
     # 修改你的脚本以支持传递数据集等位置 结束
 
@@ -176,7 +176,7 @@ if __name__ == '__main__':
 # 在原来的--config基础上再加入一个参数data_url
 parser = argparse.ArgumentParser()
 parser.add_argument('--config', type=str, default="configs/test_config")
-parser.add_argument("--data_url", type=str, default="/home/ma-user/modelarts/inputs/data_url_0")
+parser.add_argument("--data_url", type=str, default="")
 args = parser.parse_args()
 # 指定到数据集目录下的权重文件待会儿torch.load()
 vgg_pth = args.data_url + "/vgg16-397923af.pth"
@@ -187,7 +187,9 @@ config.validationset_root = args.data_url + config.validationset_root
 ```
 
 ## 通过Pycharm提交NPU训练Job
-> 见群中聊天记录，设置几个值，不想写了，你想写可以提交PR。
+> 如下图，需要修改网络id和数据集路径
+
+![图1 配置训练任务](npu/toolkit7.png)
 
 ## 完成
 > 开始你的踩坑之旅~
