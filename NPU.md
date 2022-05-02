@@ -187,7 +187,7 @@ config.validationset_root = args.data_url + config.validationset_root
 ```
 
 ## 通过Pycharm提交NPU训练Job
-> 如下图，需要修改网络id和数据集路径
+> 如下图，需要修改网络id和数据集路径（workspace不必预先创建）
 
 ![图1 配置训练任务](npu/toolkit7.png)
 
