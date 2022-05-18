@@ -189,6 +189,7 @@ config.validationset_root = args.data_url + config.validationset_root
 ## 通过Pycharm提交NPU训练Job
 > 如下图，需要修改网络id和数据集路径（workspace不必预先创建）
 
+`Pytorch 1.7 镜像: ascend-share/5.1.rc1.alpha005_tensorflow-ascend910-cp37-euleros2.8-aarch64-training:1.15.0-21.0.2_0401_t2`
 ![图1 配置训练任务](npu/toolkit7.png)
 
 ## 完成
