@@ -46,7 +46,6 @@ def build_adj(src, dst, srcfeat, directed=True):
 # print("forward with raw_affine shape=", output_bipartite.edata['raw_affine'].shape, ", data=", output_bipartite.edata['raw_affine'][:9])
 gidx = output_bipartite._graph
 src, dst, edge = gidx.edges(0)
-# 多batch下取出目标节点还有点问题估计
 src_feat = self.src_mlp(neighbor_x_src[src.long()])
 ###  feature alignment
 len_center_x_src = center_x_src.shape[0]
