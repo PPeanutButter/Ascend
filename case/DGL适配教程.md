@@ -17,6 +17,13 @@ src, dst, edge = gidx.edges(0)
 adj = self.build_adj(src, dst, srcfeat)
 out = self.gcn(srcfeat.unsqueeze(0).permute(0, 2, 1), adj.to(srcfeat.device)).permute(0, 2, 1)[0, torch.unique(dst).long(), ...]
 gcn_feat = torch.cat([dstfeat, out], dim=-1)
+
+@staticmethod
+def build_adj(src, dst, srcfeat, directed=True):
+   adj = torch.zeros(size=(srcfeat.shape[0], srcfeat.shape[0]))
+   for i in range(src.shape[0]):
+       adj[src[i]][dst[i]] = 1
+   return adj
 ```
 
 原始代码片段2（forward代码）：
